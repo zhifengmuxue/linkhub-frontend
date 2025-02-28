@@ -80,6 +80,7 @@ import {
 import ShortenLink from '@/compents/tools/ShortenLink.vue'; 
 import QRGenerator from '@/compents/tools/QRGenerator.vue'; 
 import IpDomainLookup from '@/compents/tools/IpDomainLookup.vue';
+import Timestamp from '@/compents/tools/ Timestamp.vue';
 import { markRaw } from 'vue';
 
 
@@ -94,17 +95,22 @@ const tools = ref<Tool[]>([
   {
     name: '短链接生成',
     description: '将长链接转换为短链接',
-    component: markRaw(ShortenLink), // 使用 markRaw
+    component: markRaw(ShortenLink), 
   },
   {
     name: '二维码生成',
     description: '生成任意内容的二维码',
-    component: markRaw(QRGenerator), // 使用 markRaw
+    component: markRaw(QRGenerator), 
   },
   {
     name: 'IP/域名查询',
     description: '查询IP地址或域名的详细信息',
-    component: markRaw(IpDomainLookup), // 使用 markRaw
+    component: markRaw(IpDomainLookup),
+  },
+  {
+    name: '时间戳工具',
+    description: '生成和转换时间戳',
+    component: markRaw(Timestamp),
   }
 ]);
 

@@ -6,7 +6,7 @@
         <template #title>
             <span class="tool-title">IP/域名查询</span>
         </template>
-        <a-input v-model:value="query" placeholder="请输入IP地址或域名" />
+        <a-input v-model:value="query" placeholder="请输入IP地址或域名,无需http/https前缀" />
         <a-button
             type="primary"
             @click="lookup"
