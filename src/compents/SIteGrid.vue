@@ -151,9 +151,8 @@ watch(() => props.collapsed, () => {
 .site-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 4px; /* 保持紧凑间距 */
+  gap: 4px; 
   padding: 4px;
-  min-height: calc(100vh - 64px + 1px); /* 添加1px确保内容超出容器 */
 }
 
 .site-container {
@@ -166,9 +165,13 @@ watch(() => props.collapsed, () => {
 
 .site-card {
   width: 320px;
-  height: 120px;
+  height: 120px; /* 固定高度 */
   margin: 0px;
-  /* box-sizing: border-box; */
+  overflow: hidden; /* 确保内容不会超出卡片边界 */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 修改为左对齐 */
+  text-align: left; /* 修改为左对齐 */
 }
 
 .pagination {
@@ -181,41 +184,43 @@ watch(() => props.collapsed, () => {
 }
 
 .site-card:hover {
-transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 .card-content {
-display: flex;
-align-items: center;
-gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%; /* 确保内容占满卡片宽度 */
 }
 
 .site-icon {
-width: 48px;
-height: 48px;
-border-radius: 8px;
-object-fit: cover;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .site-info {
-flex: 1;
+  flex: 1;
+  text-align: left; /* 确保内容左对齐 */
 }
 
 .site-name {
-font-weight: bold;
-font-size: 16px;
-margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
 }
 
 .site-description {
-font-size: 14px;
-color: #666;
-line-height: 1.4;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
 }
 
 .site-container {
   overflow-y: auto;
-  height: calc(100vh - 64px); /* 根据你的布局调整 */
+  height: calc(100vh - 64px); 
 }
 
 .loading-indicator {

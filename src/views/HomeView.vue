@@ -101,9 +101,9 @@ onUnmounted(() => {
 }
 
 .title {
-  font-size: 64px;
+  font-size: 86px;
   font-weight: bold;
-  background: linear-gradient(45deg, #001529, #1890ff);
+  background: linear-gradient(45deg,  #a8e6cf, #dcedc1);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -113,7 +113,7 @@ onUnmounted(() => {
 
 .subtitle {
   font-size: 24px;
-  color: #666;
+  color: #666666be;
   font-weight: 500;
 }
 
@@ -125,6 +125,8 @@ onUnmounted(() => {
 
 .description-section {
   margin-bottom: 24px;
+  color: #666666be;
+  font-weight: 400;
 }
 
 .description {
