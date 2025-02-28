@@ -80,7 +80,7 @@ import {
 import ShortenLink from '@/compents/tools/ShortenLink.vue'; 
 import QRGenerator from '@/compents/tools/QRGenerator.vue'; 
 import IpDomainLookup from '@/compents/tools/IpDomainLookup.vue';
-import Timestamp from '@/compents/tools/ Timestamp.vue';
+import Timestamp from '@/compents/tools/Timestamp.vue';
 import { markRaw } from 'vue';
 
 
